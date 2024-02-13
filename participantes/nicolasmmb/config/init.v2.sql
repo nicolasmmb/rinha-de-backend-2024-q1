@@ -13,13 +13,15 @@ BEGIN
 	INSERT INTO
 	    clientes (nome, limite, saldo)
 	VALUES ('Asuka', 1000 * 100, 0),
-	    ('Rin', 5000 * 100, 0),
-	    ('Shinji', 800 * 100, 0),
-	    ('Fern', 10000 * 100, 0),
-	    ('Frienren', 100000 * 100, 0);
+	    ('Rin', 800 * 100, 0),
+	    ('Shinji', 10000 * 100, 0),
+	    ('Fern', 100000 * 100, 0),
+	    ('Frienren', 5000 * 100, 0);
 END;
 $$; 
 
 CREATE INDEX idx_compound_cliente_id_realizado_em ON transacoes (cliente_id, realizada_em);
+
 CREATE INDEX idx_transacoes_cliente_id ON transacoes (cliente_id);
+
 CREATE INDEX idx_clientes_id ON clientes (id);

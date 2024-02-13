@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+
 
 # Use este script para executar testes locais
 
